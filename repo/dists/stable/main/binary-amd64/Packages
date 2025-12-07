@@ -4,10 +4,10 @@ Architecture: all
 Maintainer: Siripireddy Giri <Siripireddygirikumar3@gmail.com>
 Depends: bash (>= 4.0), coreutils
 Filename: pool/main/b/brainrest-1.0.0.deb
-Size: 3536
-MD5sum: 45db1317c7c8e52809f83cccce9dda94
-SHA1: 12121b26d9a61d87cda5b7256eb9fde2cecf0c86
-SHA256: a49e3da765ba5dfdc1e6bf4db6b158defafd7fe0311eef1c36bed6631e31e060
+Size: 3548
+MD5sum: 7063765ef1ca5d1c2689fc950ffb65b2
+SHA1: 4db40bcdba7099e7e284d23728e7b43ea61a5dd5
+SHA256: c730a056bb1d99e91d0c240826744a3527bb9988cc85e81e841b75f8bf81b7a1
 Section: utils
 Priority: optional
 Description: micro-break reminder tool for terminal users
