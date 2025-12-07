@@ -1,0 +1,15 @@
+Package: brainrest
+Version: 1.0.0
+Architecture: all
+Maintainer: Siripireddy Giri <Siripireddygirikumar3@gmail.com>
+Depends: bash (>= 4.0), coreutils
+Filename: pool/main/b/brainrest-1.0.0.deb
+Size: 3550
+MD5sum: 0dd4dd9f52a10abd76a5946aa2a02a8d
+SHA1: fd6c81751efdc86d8ac1c9181b4bbde3bcc1c49d
+SHA256: 8bfd14e2bd009147cdccbd96469895b9a95ec9c9c5ad2ecd760cd763ac575c94
+Section: utils
+Priority: optional
+Description: micro-break reminder tool for terminal users
+ brainrest helps prevent eye strain by reminding you to take breaks.
+
