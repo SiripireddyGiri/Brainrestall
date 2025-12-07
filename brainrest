@@ -1,0 +1,239 @@
+#!/bin/bash
+
+LOGFILE="$HOME/.brainrest.log"
+GAPFILE="$HOME/.brainrest_gap"
+DEFAULT_GAP=40
+BREAK_DURATION=120
+VERSION="1.0.0"
+
+detect_os() {
+    case "$(uname -s)" in
+        Linux*)     OS="Linux";;
+        Darwin*)    OS="Mac";;
+        *)          OS="Unknown";;
+    esac
+}
+
+get_timestamp() {
+    date +%s
+}
+
+lock_terminal() {
+    local lock_time=$BREAK_DURATION
+    local original_time=$lock_time
+    
+    local old_stty=$(stty -g)
+    stty -echo -icanon time 0 min 0 2>/dev/null
+    
+    while [ $lock_time -gt 0 ]; do
+        clear
+        echo "================================================================"
+        echo "                    BRAINREST BREAK TIME                        "
+        echo "================================================================"
+        echo ""
+        echo "  Time to rest your eyes and stretch"
+        echo ""
+        echo "  Break time remaining: $((lock_time / 60)) min $((lock_time % 60)) sec"
+        echo ""
+        printf "  ["
+        local progress=$(( (original_time - lock_time) * 50 / original_time ))
+        for i in $(seq 1 50); do
+            if [ $i -le $progress ]; then
+                printf "#"
+            else
+                printf "-"
+            fi
+        done
+        echo "]"
+        echo ""
+        echo "  Terminal is locked - all commands are disabled"
+        echo ""
+        echo "================================================================"
+        
+        while read -t 0; do read -n 1 2>/dev/null; done
+        
+        sleep 1
+        lock_time=$((lock_time - 1))
+    done
+    
+    stty "$old_stty"
+    clear
+    echo "================================================================"
+    echo "                    BREAK COMPLETED                             "
+    echo "================================================================"
+    echo ""
+    echo "  Your terminal is now unlocked"
+    echo ""
+    sleep 2
+    
+    get_timestamp > "$LOGFILE"
+}
+
+show_help() {
+    echo "brainrest - micro-break reminder tool"
+    echo ""
+    echo "Usage: brainrest [options]"
+    echo ""
+    echo "Options:"
+    echo "  -s, --set MIN     Set break interval"
+    echo "  -r, --reset       Reset break timer to default"
+    echo "  -V, --visual      Launch visual TUI mode"
+    echo "  -v, --version     Show version"
+    echo "  -h, --help        Show this help"
+}
+
+#                 VISUAL MODE 
+
+visual_mode() {
+    local options=("Start BrainRest" "Set Custom Interval" "Reset to Default" "Exit")
+    local current=0
+    local key
+
+    while true; do
+        clear
+        echo ""
+        tput setaf 6; echo "=========== BrainRest Visual Mode ===========" ; tput sgr0
+        echo ""
+
+        for i in "${!options[@]}"; do
+            if [ $i -eq $current ]; then
+                tput setaf 2; echo "> ${options[$i]}" ; tput sgr0
+            else
+                echo "  ${options[$i]}"
+            fi
+        done
+
+        echo ""
+        tput setaf 3; echo "(Use ↑ ↓ arrows, ENTER to select, ESC to exit)" ; tput sgr0
+
+        read -rsn1 key
+
+        case "$key" in
+            $'\x1b')
+                read -rsn2 -t 0.01 key2
+                if [[ "$key2" == "" ]]; then return; fi
+
+                case "$key2" in
+                    "[A") ((current--)); [[ $current -lt 0 ]] && current=$((${#options[@]} - 1));;
+                    "[B") ((current++)); [[ $current -ge ${#options[@]} ]] && current=0;;
+                esac
+                ;;
+            "")
+                case $current in
+                    0)
+                        clear
+                        echo "Starting BrainRest..."
+                        sleep 1
+                        return 0
+                        ;;
+                    1)
+                        clear
+                        read -p "Enter new interval (minutes): " new_gap
+                        if [[ "$new_gap" =~ ^[0-9]+$ ]]; then
+                            echo "$new_gap" > "$GAPFILE"
+                            get_timestamp > "$LOGFILE"
+                            echo "Interval set to $new_gap minutes."
+                        else
+                            echo "Invalid number."
+                        fi
+                        sleep 2
+                        ;;
+                    2)
+                        rm -f "$GAPFILE"
+                        rm -f "$LOGFILE"
+                        echo "Reset to 40 minutes."
+                        sleep 2
+                        ;;
+                    3)
+                        clear
+                        echo "Exiting..."
+                        exit 0
+                        ;;
+                esac
+                ;;
+        esac
+    done
+}
+
+#       LOAD INTERVAL (SAVED OR DEFAULT)
+
+detect_os
+
+if [ -f "$GAPFILE" ]; then
+    CURRENT_GAP=$(cat "$GAPFILE")
+else
+    CURRENT_GAP=$DEFAULT_GAP
+fi
+
+
+#                COMMAND-LINE OPTIONS
+
+if [ $# -gt 0 ]; then
+
+    if [ "$1" == "--visual" ] || [ "$1" == "-V" ]; then
+        visual_mode
+    fi
+
+    case "$1" in
+        -s|--set)
+            shift
+            if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+                echo "Error: time must be a number"
+                exit 1
+            fi
+            echo "$1" > "$GAPFILE"
+            get_timestamp > "$LOGFILE"
+            echo "Break timer set to $1 minutes."
+            exit 0
+            ;;
+
+        -r|--reset)
+            rm -f "$GAPFILE"
+            rm -f "$LOGFILE"
+            echo "Reset to default (40 minutes)."
+            exit 0
+            ;;
+
+        -v|--version)
+            echo "brainrest version $VERSION (running on $OS)"
+            exit 0
+            ;;
+
+        -h|--help)
+            show_help
+            exit 0
+            ;;
+
+        *)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+    esac
+fi
+
+#            MAIN AUTO BREAK LOOP
+echo "BrainRest running... Interval = $CURRENT_GAP minutes"
+echo "Press CTRL+C to exit."
+
+while true; do
+    if [ -f "$LOGFILE" ]; then
+        last_break=$(cat "$LOGFILE")
+    else
+        last_break=0
+    fi
+
+    now=$(get_timestamp)
+    diff_min=$(( (now - last_break) / 60 ))
+
+    if [ "$diff_min" -ge "$CURRENT_GAP" ]; then
+        echo ""
+        echo "Time is up! Starting break..."
+        sleep 1
+        lock_terminal
+    else
+        remain=$(( CURRENT_GAP - diff_min ))
+        echo -ne "Next break in $remain minutes...     \r"
+    fi
+
+    sleep 30
+done

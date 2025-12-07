@@ -1,0 +1,70 @@
+.TH BRAINREST 1 "November 2025" "brainrest 1.0.0" "User Commands"
+.SH NAME
+brainrest \- micro-break reminder tool
+.SH SYNOPSIS
+.B brainrest
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+.B brainrest
+reminds you to take regular breaks. When break time is up, it locks your
+terminal for 2 minutes and blocks all commands.
+
+The tool also includes an interactive visual mode,
+where you can navigate menus using arrow keys, press Enter to select options,
+and press Escape to go back.
+.SH OPTIONS
+.TP
+.BR \-s ", " \-\-set " \fIMINUTES\fR"
+Set break interval in minutes. Default is 40 minutes.
+
+.TP
+.BR \-r ", " \-\-reset
+Reset the break timer back to the default 40 minutes.
+
+.TP
+.BR \-V ", " \-\-VisualMode
+Launch interactive visual mode. Shows a menu with:
+ - Set timer
+ - Reset timer
+ - Show current configuration
+ - Exit
+
+Navigate using arrow keys, ENTER to choose, ESC to return.
+
+.TP
+.BR \-v ", " \-\-version
+Show version and operating system information.
+
+.TP
+.BR \-h ", " \-\-help
+Show help message.
+.SH EXAMPLES
+.TP
+Set 40-minute timer:
+.B brainrest \-s 40
+.TP
+Check if break time is up:
+.B brainrest
+.TP
+Reset timer:
+.B brainrest \-r
+.TP
+Open interactive visual mode:
+.B brainrest \-V
+.SH FILES
+.TP
+.I ~/.brainrest.log
+Stores the timestamp of the last break.
+.SH BEHAVIOR
+When you run
+.B brainrest
+without options, it checks if break time is up. If yes, it locks the terminal
+for 2 minutes. During this time, all keyboard input is disabled.
+
+In visual mode, menus are drawn with colors and refreshed dynamically.
+Pressing ESC returns to the previous screen.
+.SH AUTHOR
+Written by Siripireddy Giri
+.SH SEE ALSO
+.BR stty (1)
+
