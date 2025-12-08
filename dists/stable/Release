@@ -1,0 +1,7 @@
+Origin: BrainRest Repository
+Label: BrainRest
+Suite: stable
+Codename: stable
+Architectures: all amd64
+Components: main
+Description: BrainRest Debian Repository

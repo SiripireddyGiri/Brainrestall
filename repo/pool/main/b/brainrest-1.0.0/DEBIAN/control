@@ -1,0 +1,9 @@
+Package: brainrest
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: bash (>= 4.0), coreutils
+Maintainer: Siripireddy Giri <Siripireddygirikumar3@gmail.com>
+Description: micro-break reminder tool for terminal users
+ brainrest helps prevent eye strain by reminding you to take breaks.
