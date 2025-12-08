@@ -3,7 +3,7 @@ Version: 1.0.0
 Architecture: all
 Maintainer: Siripireddy Giri <Siripireddygirikumar3@gmail.com>
 Depends: bash (>= 4.0), coreutils
-Filename: pool/main/b/brainrest-1.0.0.deb
+Filename: pool/main/b/brainrest_1.0.0-1_all.deb
 Size: 4416
 MD5sum: d0be8749ec6bfd9f4b2a64a65e47f3ab
 SHA1: 643a5b88687c42c9559902840f0271916a13132f
