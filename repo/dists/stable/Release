@@ -1,7 +1,17 @@
-Origin: Brainrest
-Label: Brainrest
-Suite: stable
-Codename: stable
-Architectures: amd64
-Components: main
-Description: Brainrest APT repository
+Date: Mon, 08 Dec 2025 11:13:28 +0000
+MD5Sum:
+ b77af7de7a6565f91a32ff81cec322cb               38 Release
+ 1002f4f3f04189936aa2033eb2aeb614              525 main/binary-amd64/Packages
+ 7a1ff8f7f8721e5dd68ceadefb827ab8              397 main/binary-amd64/Packages.gz
+SHA1:
+ f0a5081a8509ecb60f427b33a243328bdad6dd2a               38 Release
+ 680b8e252e2e1758ae7deca59e8e4db92446ddd3              525 main/binary-amd64/Packages
+ bb6c41e95321c463a255236b86dc42b5517f688f              397 main/binary-amd64/Packages.gz
+SHA256:
+ 0b6f5df3fe1c508352368973d7c5362d92d171a9ca9e3f94ef13bb3e73eb31a3               38 Release
+ b91f60ae463816d71a2bcc5ec3381ec082aafc88e3c1abfdd43d9e565467fbde              525 main/binary-amd64/Packages
+ 16748528931062dce2c72f00f9f75bae27a57cd360c86de7a5d838dc39395782              397 main/binary-amd64/Packages.gz
+SHA512:
+ ad530d1707ef38b31f3a253cf686d5f78d093a960856ef48adf9e185890220d21a6056678572845902eca258a4c2034d84063a440748515559a560201fda5419               38 Release
+ 191126dfbf09d88a33c7e00283c8d66846b96d84d534d8d88edbc19a3c68e3c082e8b37e72e53eafb5d578a2360d58aa0998ef1051d884da82d5c1795442d20d              525 main/binary-amd64/Packages
+ 7bbc2cf9d8a7aca597c9ec38104a921e1bca9d3d5c2ee3a08a661014daff4e8b1671ec05bdd72a86706e7200128b8c827dd40bf7a4cb61b94738894381bec86b              397 main/binary-amd64/Packages.gz

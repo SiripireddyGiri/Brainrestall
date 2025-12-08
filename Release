@@ -1,0 +1,57 @@
+Date: Mon, 08 Dec 2025 11:11:40 +0000
+MD5Sum:
+ b8ce7c9e3b671bf03a5f0b55df8ade6a              527 Packages
+ fc386a26fb54efd9fbbe9629f26ddf90              387 Packages.gz
+ 221f031d26f86e94f55b9ef3f2f42dde               38 Release
+ c7852a0514e0064094b68226420a429b              160 dists/stable/Release
+ a8ade1878013fcc01faa4c49c04aca6c              515 dists/stable/main/binary-all/Packages
+ b5dfe5ef953cd7f5bff3fa1e7381e70b              390 dists/stable/main/binary-all/Packages.gz
+ a8ade1878013fcc01faa4c49c04aca6c              515 dists/stable/main/binary-amd64/Packages
+ b5dfe5ef953cd7f5bff3fa1e7381e70b              390 dists/stable/main/binary-amd64/Packages.gz
+ 03fab85783247250360be3d0f9304ae0             1348 repo/dists/stable/Release
+ 1002f4f3f04189936aa2033eb2aeb614              525 repo/dists/stable/main/binary-amd64/Packages
+ ca93fe83edeed9df1689e2c9c5ebb217              397 repo/dists/stable/main/binary-amd64/Packages.gz
+ a8ade1878013fcc01faa4c49c04aca6c              515 repo/pool/main/b/Packages
+ b5dfe5ef953cd7f5bff3fa1e7381e70b              390 repo/pool/main/b/Packages.gz
+SHA1:
+ 7dc230ae291941cc94cb703a65364372c424e2c9              527 Packages
+ 8053b5863adc31f590baf53ffab042c3ae925cd3              387 Packages.gz
+ 0da1afe6d86cca36d620490d3f83bcb816c62fa2               38 Release
+ 2be10e438bc9937f278b276de45e4fb43d0b6af4              160 dists/stable/Release
+ ad4ab63311b796dcea4c645ef039215c8b66c4f3              515 dists/stable/main/binary-all/Packages
+ 16b195d02b1e19032adea1049a158bfee14baeda              390 dists/stable/main/binary-all/Packages.gz
+ ad4ab63311b796dcea4c645ef039215c8b66c4f3              515 dists/stable/main/binary-amd64/Packages
+ 16b195d02b1e19032adea1049a158bfee14baeda              390 dists/stable/main/binary-amd64/Packages.gz
+ 2e9387fae65c52f6082a0e24b1c33aeecfb6018d             1348 repo/dists/stable/Release
+ 680b8e252e2e1758ae7deca59e8e4db92446ddd3              525 repo/dists/stable/main/binary-amd64/Packages
+ be0d835453b36913805fcf98c6116264bfa598d8              397 repo/dists/stable/main/binary-amd64/Packages.gz
+ ad4ab63311b796dcea4c645ef039215c8b66c4f3              515 repo/pool/main/b/Packages
+ 16b195d02b1e19032adea1049a158bfee14baeda              390 repo/pool/main/b/Packages.gz
+SHA256:
+ 8955e03dc33e25f53e2f46aaf8afd4435ab041da18c511b2810e4ee9f0fd1787              527 Packages
+ 904cea7d2888b82e777c0ab3d24e24d206642d461ffd04ddd5fecdf632ce3626              387 Packages.gz
+ 36c746699e6981e182201cd9f33ec66f1d19d8c86af16fda47f2539e5024ee05               38 Release
+ aefdb93a7a8ecde939eb029abece5f8289b423f4736dc59e07797e68d0b23cfb              160 dists/stable/Release
+ 0c4d00b4be12ff2efdb34db9aac17ea86d1d431dbe80ae6ec972afd2703bfdc2              515 dists/stable/main/binary-all/Packages
+ a72b8d31eec8322ff7e0b2a7b7221dcf732cdf43d13fc7d09d1d476c348c8ddc              390 dists/stable/main/binary-all/Packages.gz
+ 0c4d00b4be12ff2efdb34db9aac17ea86d1d431dbe80ae6ec972afd2703bfdc2              515 dists/stable/main/binary-amd64/Packages
+ a72b8d31eec8322ff7e0b2a7b7221dcf732cdf43d13fc7d09d1d476c348c8ddc              390 dists/stable/main/binary-amd64/Packages.gz
+ 5b01807d7d952d5a6ef8f2bba8574a00dc5c3cdb6c9e8d2a649f428bb19f3449             1348 repo/dists/stable/Release
+ b91f60ae463816d71a2bcc5ec3381ec082aafc88e3c1abfdd43d9e565467fbde              525 repo/dists/stable/main/binary-amd64/Packages
+ a8cb81b65b10db2f3b3fea342097e83542dc3a926d626027f713163af3b8289b              397 repo/dists/stable/main/binary-amd64/Packages.gz
+ 0c4d00b4be12ff2efdb34db9aac17ea86d1d431dbe80ae6ec972afd2703bfdc2              515 repo/pool/main/b/Packages
+ a72b8d31eec8322ff7e0b2a7b7221dcf732cdf43d13fc7d09d1d476c348c8ddc              390 repo/pool/main/b/Packages.gz
+SHA512:
+ 5762655e387573586c553bbb19e46302269066887e95ef65f31f9daeac2e7fd6e2554b444845f336fa8696ea0de10d9317cf13fe61b92ca27b1cb0f021ed0af5              527 Packages
+ c3dd5b8eda447bf3668152671d82e7002897e0578d2836acb9636b00bddf1617cfbf33c1bba98691ceb12c76574da208284c8dce2a2c7d68046092fc3ec4f73e              387 Packages.gz
+ 918778e51f50e28ec9933ac8512b215a951633a6f45c0f7560833a3dae0107f87776f3ee27e05782b64ec7e54a3fd7182e1bc3ab5a73c765438295f22131d67e               38 Release
+ 75ae5d3c4ca89c5adc2f1969436af38263b39a6c353a11a1a1cb27d5406713694c08f3d5ef4d222f0d50726172de9b9ae40da339476aefc4d387027450c27d5e              160 dists/stable/Release
+ 0b9e296f086025e62e0af78bd2361af031c0f27f35e51c750235c8a8fa94016b63cd9fb62ca9808f418d5243b81cad853e3f7cbfb01e1b69bcf90dfa5a1b2492              515 dists/stable/main/binary-all/Packages
+ decabee5b726904881b529d40946a1205185626e1c59b5706b30c3a213bb8e97845069bdc6b08f4a3377522e204567e418b4f4d0e1325b707a850f18414249cb              390 dists/stable/main/binary-all/Packages.gz
+ 0b9e296f086025e62e0af78bd2361af031c0f27f35e51c750235c8a8fa94016b63cd9fb62ca9808f418d5243b81cad853e3f7cbfb01e1b69bcf90dfa5a1b2492              515 dists/stable/main/binary-amd64/Packages
+ decabee5b726904881b529d40946a1205185626e1c59b5706b30c3a213bb8e97845069bdc6b08f4a3377522e204567e418b4f4d0e1325b707a850f18414249cb              390 dists/stable/main/binary-amd64/Packages.gz
+ fcbd261dba91a361db2f0667560a51e441b0a7e6ddb3dc261dc83df695a1e690dafcf40e4862c4aca1297b50bdee241f3b47e92b7269ae5d6053a4b2448120b0             1348 repo/dists/stable/Release
+ 191126dfbf09d88a33c7e00283c8d66846b96d84d534d8d88edbc19a3c68e3c082e8b37e72e53eafb5d578a2360d58aa0998ef1051d884da82d5c1795442d20d              525 repo/dists/stable/main/binary-amd64/Packages
+ 8eb178d094736a5f650b3c8bb70a7ae7e513e54c0685c42b847136b0ac810e1ca97209e9706692fb12474f17273dd3dec026f9338cd05b09f4a8ac2994953fcc              397 repo/dists/stable/main/binary-amd64/Packages.gz
+ 0b9e296f086025e62e0af78bd2361af031c0f27f35e51c750235c8a8fa94016b63cd9fb62ca9808f418d5243b81cad853e3f7cbfb01e1b69bcf90dfa5a1b2492              515 repo/pool/main/b/Packages
+ decabee5b726904881b529d40946a1205185626e1c59b5706b30c3a213bb8e97845069bdc6b08f4a3377522e204567e418b4f4d0e1325b707a850f18414249cb              390 repo/pool/main/b/Packages.gz
